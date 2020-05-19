@@ -9,6 +9,18 @@ body{
     height: 100%;
 }
 /* 给body设置100%的高度和宽度，这样就会根据浏览器屏幕大小自动适配 */
+#head{
+	font-size: 2rem;
+	background-color: #ffe171;
+}
+a{
+	text-decoration: none;
+	color: #000000;
+	display: inline-block;
+}
+a:hover{
+	color: #20a6fa;
+}
 #container{
     position: relative;
     width: 620px;

@@ -2,70 +2,52 @@
 <html>
 	<head>
 		<meta charset="utf-8">
-		<title>我爱你</title>
-		<style type="text/css">
-			html,body {
-				height: 100%;
-				margin: 0rem;
-				padding: 0rem;
-			}
-			body {
-				margin: 0rem;
-			}
-			
-			h1 {
-				margin: 0rem;
-				padding: 0.25rem;
-				color: aliceblue;
-				background: red;
-			}
-			
-			div {
-				margin: 0.625rem auto;
-			}
-			
-			a {
-				text-decoration: none;
-				color: aliceblue;
-			}
-			
-			a:hover {
-				color: gray;
-			}
-			
-			ul {
-				height: 20%;
-				list-style-type: none;
-				position: relative;
-				top: 30%;
-			}
-			
-			li {
-				font-size: 1.875rem;
-				margin: 1.875rem;
-				text-align: center;
-			}
-			
-			li a {
-				color: black;
-			}
-			
-			li a:hover {
-				color: black;
-			}
-		</style>
+		<title>李大大和龙宝宝的小站</title>
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=0, minimum-scale=1.0, maximum-scale=1.0" />
+		<script type="text/javascript" src="https://cn.vuejs.org/js/vue.min.js"></script>
+		<link rel="stylesheet" href="css/index.css">
+		<script type="text/javascript" src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+		<script type="text/javascript" src="js/yinghua.js"></script>
+		<script type="text/javascript" src="js/device.js"></script>
 	</head>
+
 	<body>
-		<h1>
-			<a href="index.html">龙宝宝小站</a>
-		</h1>
-		<ul>
-			<li><a href="balloon520/index.html">
-					<h2>告白H5</h2>
-				</a></li>
-			<li><a href="puzzle/index.html">
-					<h2>拼图</h2>
-				</a></li>
-		</ul>
+		<audio style="display:none; height: 0" id="bg-music" preload="auto" src="bg_music/WindyHill.mp3" loop="loop"></audio>
+		<div class="cherry">
+			<img id="yinghua" src="img/yinghua.png" alt="">
+		</div>
+		<div id="app" class="box">
+			<div class="box_contain" v-show="showBox">
+				<div class="des"> {{text1}} </div>
+				<div class="des"> {{text2}} </div>
+				<div class="des"> {{text3}} </div>
+				<div class="des"> {{text4}} </div>
+				<transition name="fade">
+					<div v-show="showTimes" class="time"> {{timeLeft}} </div>
+				</transition>
+				<div class="des"> {{text5}}{{text6}} </div>
+				<div id="option" style="text-align: center;">
+					<a href="balloon520/index.html">告白H5</a>
+					<a href="puzzle/index.html">拼图</a>
+				</div>
+			</div>
+			<img height="200px" class="gifImg" v-show="!showBox" src="img/loading.gif" alt="">
+		</div>
+		<!--樱花控制-->
+		<script>
+			$(function() {
+				$('.cherry').Cherry_Blossoms({
+					is_Cherry: true, //是否生成樱花
+					image_min: 10, //花瓣最小宽度和高度
+					image_max: 50, //花瓣最大宽度和高度
+					time_min: 10000, //花瓣最快下坠时间
+					time_max: 20000, //花瓣最慢下坠时间
+					interval: 400 //花瓣生成时间间隔
+				})
+			})
+		</script>
+		<script type="text/javascript" src="js/control.js"></script>
+		<script type="text/javascript" src="js/music.js"></script>
+		<script type="text/javascript" src="js/protect.js"></script>
 	</body>
 </html>
