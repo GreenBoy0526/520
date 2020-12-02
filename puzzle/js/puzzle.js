@@ -21,7 +21,7 @@ var d_direct=new Array(
 //保存大DIV编号的可移动位置编号
 var d_posXY=new Array(
         [0],//同样，我们不使用第一个元素
-        [0,0],//第一个表示left,第二个表示top，比如第一块的位置为let:0px,top:0px
+        [0,0],//第一个表示left,第二个表示top，比如第一块的位置为left:0px,top:0px
         [150,0],
         [300,0],
         [0,150],
