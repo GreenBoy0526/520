@@ -6,7 +6,6 @@
 		<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=0, minimum-scale=1.0, maximum-scale=1.0" />
 		<script type="text/javascript" src="https://cn.vuejs.org/js/vue.min.js"></script>
 		<link rel="stylesheet" href="css/index.css">
-		<script type="text/javascript" src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
 		<script type="text/javascript" src="js/yinghua.js"></script>
 		<script type="text/javascript" src="js/device.js"></script>
 	</head>
@@ -33,21 +32,7 @@
 			</div>
 			<img height="200px" class="gifImg" v-show="!showBox" src="img/loading.gif" alt="">
 		</div>
-		<!--樱花控制-->
-		<script>
-			$(function() {
-				$('.cherry').Cherry_Blossoms({
-					is_Cherry: true, //是否生成樱花
-					image_min: 10, //花瓣最小宽度和高度
-					image_max: 50, //花瓣最大宽度和高度
-					time_min: 10000, //花瓣最快下坠时间
-					time_max: 20000, //花瓣最慢下坠时间
-					interval: 400 //花瓣生成时间间隔
-				})
-			})
-		</script>
 		<script type="text/javascript" src="js/control.js"></script>
 		<script type="text/javascript" src="js/music.js"></script>
-		<script type="text/javascript" src="js/protect.js"></script>
 	</body>
 </html>
